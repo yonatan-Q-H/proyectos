@@ -1,0 +1,8 @@
+CREATE TABLE asistencia (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_alumno INT NOT NULL,
+    asistencia ENUM('A', 'T', 'F') NOT NULL,
+    FOREIGN KEY (id_alumno) REFERENCES alumno(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
